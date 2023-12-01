@@ -122,7 +122,7 @@ export default {
       const recetteAleatoire =
         recettesDisponibles[Math.floor(Math.random() * recettesDisponibles.length)];
 
-      if (recetteAleatoire) {
+      if (recetteAleatoire && recetteAleatoire.ingredients && Array.isArray(recetteAleatoire.ingredients)) {
         menuSemaine.push({
           ...recetteAleatoire,
           jourSemaine: jour,
@@ -156,6 +156,7 @@ export default {
   localStorage.setItem("menuSemaine", JSON.stringify(menuSemaine));
   this.recupereRecettesMenu();
 },
+
 
 
     afficherAlerteRecette(recette) {
