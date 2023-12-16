@@ -1,12 +1,23 @@
 <template>
-  <div>
+  <div class="container">
     <label>Rechercher une recette:</label>
     <input v-model="rechercheRecette" type="text" @input="filtrerParNom" />
     <!-- Afficher les recettes filtrées par catégorie -->
     <div v-for="category in recettesFiltrees" :key="category.name">
       <h3>{{ category.name }}</h3>
-      <div v-for="recette in category.recipes" :key="recette.id">
-        {{ recette.nomRecette }}
+      <div class="recipe-grid">
+        <div
+          v-for="recette in category.recipes"
+          :key="recette.id"
+          class="recipe-card"
+        >
+          <img v-if="recette.photo" :src="recette.photo" alt="Recipe Photo" />
+          <h4>{{ recette.nomRecette }}</h4>
+          <p><strong>Ingrédients:</strong> {{ recette.ingredients }}</p>
+          <p><strong>Instructions:</strong> {{ recette.instructions }}</p>
+          <p><strong>Calories:</strong> {{ recette.calories }}</p>
+          <p><strong>Portions:</strong> {{ recette.portions }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -62,7 +73,7 @@ export default {
 
 <style>
 .container {
-  max-width: 600px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
 }
@@ -84,14 +95,30 @@ h3 {
   margin-bottom: 10px;
 }
 
-div[role="recipe"] {
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 15px;
 }
 
-div[role="recipe"] div {
-  margin-bottom: 5px;
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.recipe-card p {
+  margin: 5px 0;
 }
 
 /* Add more styles as needed */
