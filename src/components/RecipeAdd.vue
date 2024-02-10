@@ -4,7 +4,7 @@
 <div class="left-section">
   <h1>Ajouter une recette</h1>
   
-  <h3><span class="exclamation">Veuillez vous connecter avant d'entrer une recette !</span></h3>
+ 
     <div class="form-group">
       <label for="recipeName">Nom de la recette:</label>
       <input id="recipeName" v-model="recipeData.name" type="text" />

@@ -92,13 +92,13 @@ export default {
       currentPage: null,
       leftItems: [
         
-        { text: 'Recipes', link: '/recipe-list' },
+        { text: 'Recettes', link: '/recipe-list' },
         { text: 'Menu', link: '/menu-input' },
       ],
       rightItems: [
         //{ text: 'Generation', link: '/menu-semaine' },
         
-        { text: 'Home', link: '/Home' },
+        { text: 'Acceuil', link: '/Home' },
         { text: 'Connexion', link: '/authentification' },
         
       ],

@@ -60,8 +60,7 @@ Votre liste de course est automatiquement générée et peut être  <br> utilis�
 <script>
 export default {
   mounted() {
-    // Code to run after the component is mounted
-    // You can add any additional logic related to the ChatBot here
+    
 
     // Start of ChatBot (www.chatbot.com) code
     window.__be = window.__be || {};
