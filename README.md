@@ -1,5 +1,14 @@
 # VUE JS PROJECT RECIPES AND GENERATE MENU
-Afin de luter contre le gaspillage, j'ai developper cette application web pour generer le menu de la semaine à partir de recettes existantes qu'on propose;ou de recettes que l'utilisateur rentrera, il peut choisir de generer un menu manuellement en rentrant les plats qu'il souhaite, ou il peut aussi generer un menu automatiquement grace a notre site, dans les deux cas il pourra afficher la liste de courses a faire pour la semaine. Je note qu'il faut que l'utilisateur creer un compte et se connecte pour qu'il retrouve les recettes qu'il a enregistrer ainsi que son menu généré. 
+Afin de lutter contre le gaspillage, j’ai développé une application web permettant de générer le menu de la semaine à partir de recettes proposées ou saisies par l’utilisateur.
+Ce dernier peut :
+
+-générer manuellement un menu en sélectionnant les plats qu’il souhaite,
+
+-générer automatiquement un menu hebdomadaire grâce à notre algorithme.
+
+Dans les deux cas, l’application affiche automatiquement la liste de courses correspondante à réaliser pour la semaine.
+
+Un compte utilisateur est requis afin de sauvegarder les recettes personnelles et de retrouver facilement les menus générés.
 ## Project setup
 ```
 
